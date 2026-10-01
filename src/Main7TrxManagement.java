@@ -29,6 +29,9 @@ public class Main7TrxManagement {
             } else {
                 connection.rollback();
             }
+            preparedStatement1.close();
+            preparedStatement2.close();
+            connection.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
